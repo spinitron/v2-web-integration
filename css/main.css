@@ -8,16 +8,6 @@ html, body {
     height: 100%;
 }
 
-::-moz-selection {
-    background: #222;
-    text-shadow: none;
-}
-
-::selection {
-    background: #222;
-    text-shadow: none;
-}
-
 hr {
     display: block;
     height: 1px;
@@ -79,8 +69,7 @@ header nav a {
     margin-bottom: 1px;
 }
 
-header nav a:hover,
-header nav a:visited {
+header nav a:hover {
     background-color: #222;
 }
 
@@ -113,7 +102,7 @@ header nav a:hover {
     margin: 0;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 20em;
 }
 
 .widget-box h1 {
@@ -140,6 +129,18 @@ header nav a:hover {
 
 .widget-box.now-playing {
     height: 25em;
+}
+
+/* ==============
+    MOBILE: Content
+   ============== */
+
+.widget-docs p {
+    margin-bottom: 0;
+}
+
+.widget-docs p + ul {
+    margin-top: 0;
 }
 
 /* ==========================================================================
@@ -210,7 +211,7 @@ header nav a:hover {
    Helper classes
    ========================================================================== */
 
-.bitbucket {
+.github {
     font-family: Calibri, sans-serif;
     border: 1px solid #0a0;
     border-radius: 3px;
@@ -219,7 +220,7 @@ header nav a:hover {
     background-color: #dfd;
 }
 
-p.bitbucket {
+p.github {
     display: inline-block;
     margin: 0.5em 0;
 }

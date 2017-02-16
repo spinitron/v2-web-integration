@@ -31,25 +31,42 @@
         <div class="widget-box now-playing">
             <header>
                 <h1>Now Playing</h1>
-                <h2>Most recent 5 spins</h2>
+                <h2>Most recent 5 spins with timestamps and enabled sharing</h2>
             </header>
-            <iframe src="https://spinitron.com/v2/widget/now-playing?station=wzbc&num=5&time=1&tweets=1"></iframe>
+            <iframe src="https://spinitron.com/v2/widget/now-playing?station=wzbc&num=5&time=1&sharing=1"></iframe>
         </div>
 
         <div class="widget-docs">
             <h2>Put most recent songs in an iframe</h2>
 
-            <p>This page shows how you can put the recent spins in an iframe. The iframe's height is set
-                by this page's stylesheet. It does not adjust according to the height of the content.</p>
+            <p>This page shows how you can put the recent spins in an iframe.</p>
+            <p>The iframe's height is set by this page's stylesheet. It does not adjust according to the height of the
+                content.</p>
 
-            <p class="bitbucket"><a href="https://bitbucket.org/spinitron/spinitron.bitbucket.org/src">Source code</a>
-                for this demo web site is on Bitbucket</p>
+            <p>Available options:</p>
+            <ul>
+                <li>
+                    <code>staion</code> - the station name
+                </li>
+                <li>
+                    <code>num</code> - amount of spins to show. Default <code>1</code>
+                </li>
+                <li>
+                    <code>sharing</code> - whether to show sharing links. Default <code>false</code></li>
+                <li>
+                    <code>time</code> - whether to show timestamps at the start of a line. Default
+                    <code>false</code></li>
+                <li>
+                    <code>nolinks</code> - whether to hide links to the dj, station, music pages. Default
+                    <code>false</code>
+                </li>
+            </ul>
 
-            <p><a href="spincontainer.html">This page example</a> (plain, no stylesheet) shows how to adjust the
-                iframe's height so it fits the iframe's content – view its page source for explaination and
-                instructions.
-                The <a href="/schedule.html">Schedule</a> and <a href="/current.html">Current playlist</a> demo pages
-                use this technique.</p>
+            <p class="github">
+                <a href="https://github.com/spinitron/v2-web-integration" target="_blank">Source code</a> for this demo
+                web site is on
+                Github
+            </p>
         </div>
     </div> <!-- #main -->
 </div> <!-- #main-container -->
