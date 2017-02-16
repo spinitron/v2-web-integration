@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Now playing</title>
-    <meta name="Description" content="Demonstrates embedding Spinitron most recent songs on your web site.">
+    <title>Current playlist</title>
+    <meta name="Description" content="Demonstrates embedding a Spinitron playlist on your web site.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
@@ -30,31 +30,20 @@
 <div class="main-container">
     <div class="main wrapper">
         <div class="widget-box">
-            <h1>Now Playing</h1>
-            <h2>Most recent 5 spins</h2>
-            <div id="spin-wrap">
-                <iframe id="spin-iframe" class="spin-songs"
-                        src="http://spinitron.com/public/newestsong.php?num=5&station=wzbc&time=1&tweets=1">
-                </iframe>
-            </div>
+            <h1>Current Playlist</h1>
+            <h2>Most recent playlist and/or show</h2>
+            <iframe src="https://spinitron.com/v2/widget/current-playlist?station=wzbc"></iframe>
         </div>
 
         <div class="widget-docs">
-            <h1>Now Playing widget</h1>
+            <h1>Current Playlist widget</h1>
+            <h2>Most recent playlist and/or show</h2>
 
-            <h2>Put most recent songs in an iframe</h2>
-
-            <p>This page shows how you can put the recent spins in an iframe. The iframe's height is set
-                by this page's stylesheet. It does not adjust according to the height of the content.</p>
+            <p>This page shows how you can put the current playlist in an iframe.</p>
+            <p>If no playlist is currently playing, currently on-air show and most recent playlist are displayed.</p>
 
             <p class="bitbucket"><a href="https://bitbucket.org/spinitron/spinitron.bitbucket.org/src">Source code</a>
                 for this demo web site is on Bitbucket</p>
-
-            <p><a href="spincontainer.html">This page example</a> (plain, no stylesheet) shows how to adjust the
-                iframe's height so it fits the iframe's content – view its page source for explaination and
-                instructions.
-                The <a href="/schedule.html">Schedule</a> and <a href="/current.html">Current playlist</a> demo pages
-                use this technique.</p>
         </div>
     </div> <!-- #main -->
 </div> <!-- #main-container -->
