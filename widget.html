@@ -1,0 +1,235 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Now Playing JavaScript Widget</title>
+    <meta name="Description" content="This widget puts recent spins on your web page without needing an
+        iframe. Easy cut-n-paste to use it. Easy styling of the results.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto+Condensed:300">
+    <style>
+        .widget-box {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 91%;
+            padding: 1em;
+            background: #FFFABC;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            height: 20em;
+        }
+
+        .widget-box h1 {
+            font-weight: normal;
+            font-size: 1.4em;
+            margin: 0;
+        }
+
+        @media only screen and (min-width: 768px) {
+            .widget-box {
+                float: right;
+                width: 40%;
+                margin: 0 0 1em 2em;
+                box-shadow: 0 0 0.2em 0.2em #e7e7e7;
+            }
+        }
+
+        .widget-box p.recentsong {
+            margin: 0.5em 0 0;
+            font-size: 90%;
+        }
+
+        .widget-box b {
+            font-family: Roboto, sans-serif;
+            font-weight: 500;
+        }
+
+        #spinitron-nowplaying .spunpart,
+        #spinitron-nowplaying .diskpart,
+        #spinitron-nowplaying .labelpart {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="header-container">
+    <header>
+        <nav>
+            <a href="/">Now Playing</a>
+            <a href="/playlist.html">Current Playlist</a>
+            <a href="/shows.html">Upcoming Shows</a>
+            <a href="/widget.html">JS Widget</a>
+        </nav>
+    </header>
+</div>
+
+<div class="main-container">
+    <div class="main">
+        <h1>Now Playing JavaScript Widget</h1>
+
+        <div class="widget-box now-playing">
+            <header>
+                <h1>Recent spins on WZBC</h1>
+            </header>
+            <div data-station="wzbc" data-num="5" data-time="1" data-sharing="1" id="spinitron-nowplaying"></div>
+            <script src="//v2.spinitron.com/js/npwidget.js"></script>
+        </div>
+
+        <div class="widget-docs">
+            <p>
+                The Now Playing JavaScript Widget puts the most recent spins on your web page without needing an iframe
+                or use of the SpinPapi API.
+                A small script fetches markup for recent spins from Spinitron and puts it into a container element on
+                your page.
+            </p>
+
+            <p class="github">
+                <a href="https://github.com/spinitron/v2-web-integration" target="_blank">Source code</a> for this demo
+                web site is on Github
+            </p>
+
+            <p>The widget has three advantages over iframes.</p>
+
+            <ol>
+                <li><p>
+                    It's easier to style because the markup is on your page rather than in a separate page that
+                    the client loads into the iframe. Add style rules for the widget's markup in your page or one of
+                    its stylesheets.
+                </p></li>
+                <li><p>
+                    The widget container automatically assumes the height of its contents (unless you
+                    specify otherwise). It's hard to do that with an iframe so most often they have a specified
+                    static height.
+                </p></li>
+                <li><p>It loads faster and with less flicker.</p></li>
+            </ol>
+
+            <p>
+                To use the widget, put a container element, a <code>div</code> for example, on your page in which the
+                recent spins should appear, followed by the widget script. Set the container element's <code>ID</code>
+                attribute to <code>spinitron-nowplaying</code>, so the widget can find it, and add a <code>data</code>
+                element to identify your station like this:
+            </p>
+
+            <!--
+            <div data-station="wzbc" id="spinitron-nowplaying"></div>
+            <script src="//v2.spinitron.com/js/npwidget.js"></script>
+            -->
+            <pre>&lt;div data-station=&quot;wzbc&quot; id=&quot;spinitron-nowplaying&quot;&gt;&lt;/div&gt;
+&lt;script src=&quot;//v2.spinitron.com/js/npwidget.js&quot;&gt;&lt;/script&gt;</pre>
+
+            <p>
+                Now you can style the now playing display by adding style rules to the page or one of its stylesheets.
+                This page is an example – view this page's source or or below for the markup and styles.
+            </p>
+
+            <p>Other parameters that control the widget are described in the table.</p>
+
+            <table>
+                <thead>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Use</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><code>station</code></td>
+                    <td>Station id, e.g. &quot;wzbc&quot;. Mandatory</td>
+                </tr>
+                <tr>
+                    <td><code>num</code></td>
+                    <td>Number of spins. Default is &quot;1&quot;. Use negative number to reverse the order, e.g. &quot;1&quot;,
+                        &quot;-5&quot;.
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>sharing</code></td>
+                    <td>Set to &quot;1&quot; to request Twitter and Facebook share links in the markup.</td>
+                </tr>
+                <tr>
+                    <td><code>time</code></td>
+                    <td>Set to &quot;1&quot; to request timestamps at the start of a line. Default is “… spun by …”
+                        clause
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>nolinks</code></td>
+                    <td>Set to &quot;1&quot; to request no links in the response.</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <p>The example on this page shows how they are used in the container element.</p>
+
+            <p>The example on this page uses this markup:</p>
+
+            <pre><code>&lt;div class=&quot;widget-box&quot;&gt;
+    &lt;h1&gt;Recent spins on WZBC&lt;/h1&gt;
+    &lt;div data-station=&quot;wzbc&quot; data-num=&quot;8&quot; data-time=&quot;1&quot; data-nolinks=&quot;1&quot; id=&quot;spinitron-nowplaying&quot;&gt;&lt;/div&gt;
+    &lt;script src=&quot;//v2.spinitron.com/js/npwidget.js&quot;&gt;&lt;/script&gt;
+&lt;/div&gt;
+</code></pre>
+
+            <p>and these style rules:</p>
+
+            <pre><code>.widget-box {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 91%;
+    padding: 1em;
+    background: #FFFABC;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 20em;
+}
+
+.widget-box h1 {
+    font-weight: normal;
+    font-size: 1.4em;
+    margin: 0;
+}
+
+@media only screen and (min-width: 768px) {
+    .widget-box {
+        float: right;
+        width: 40%;
+        margin: 0 0 1em 2em;
+        box-shadow: 0 0 0.2em 0.2em #e7e7e7;
+    }
+}
+
+.widget-box p.recentsong {
+    margin: 0.5em 0 0;
+    font-size: 90%;
+}
+
+.widget-box b {
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+}
+
+#spinitron-nowplaying .spunpart,
+#spinitron-nowplaying .diskpart,
+#spinitron-nowplaying .labelpart {
+    display: none;
+}
+    </code></pre>
+
+            <h3>Note</h3>
+
+            <p>The widget requires a <code>&lt;script&gt;</code> element on the page, which some CMS and blog services
+                block – wordpress.com does, blogger.com does not. But that doesn&#39;t me you can&#39;t
+                use it in WordPress – you probably can if you have your own instance but with the commercial
+                wordpress.com service you&#39;re out of luck.</p>
+        </div>
+    </div> <!-- #main -->
+</div> <!-- #main-container -->
+
+</body>
+</html>

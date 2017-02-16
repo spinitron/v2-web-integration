@@ -33,7 +33,7 @@
                 <h1>Current Playlist</h1>
                 <h2>Most recent playlist and/or show</h2>
             </header>
-            <iframe src="https://spinitron.com/v2/widget/current-playlist?station=wzbc"></iframe>
+            <iframe src="https://v2.spinitrion.com/widget/current-playlist?station=wzbc"></iframe>
         </div>
 
         <div class="widget-docs">
@@ -42,12 +42,21 @@
             <p>This page shows how you can put the current playlist in an iframe.</p>
             <p>If no playlist is currently playing, currently on-air show and most recent playlist are displayed.</p>
 
-            <p>Available options:</p>
-            <ul>
-                <li>
-                    <code>staion</code> - the station name
-                </li>
-            </ul>
+            <p>Available parameters:</p>
+            <table>
+                <thead>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Use</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><code>station</code></td>
+                    <td>Station id, e.g. &quot;wzbc&quot;. Mandatory</td>
+                </tr>
+                </tbody>
+            </table>
 
             <p class="github">
                 <a href="https://github.com/spinitron/v2-web-integration" target="_blank">Source code</a> for this demo web site is on

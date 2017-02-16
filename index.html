@@ -33,7 +33,7 @@
                 <h1>Now Playing</h1>
                 <h2>Most recent 5 spins with timestamps and enabled sharing</h2>
             </header>
-            <iframe src="https://spinitron.com/v2/widget/now-playing?station=wzbc&num=5&time=1&sharing=1"></iframe>
+            <iframe src="https://v2.spinitrion.com/widget/now-playing?station=wzbc&num=5&time=1&sharing=1"></iframe>
         </div>
 
         <div class="widget-docs">
@@ -43,24 +43,41 @@
             <p>The iframe's height is set by this page's stylesheet. It does not adjust according to the height of the
                 content.</p>
 
-            <p>Available options:</p>
-            <ul>
-                <li>
-                    <code>staion</code> - the station name
-                </li>
-                <li>
-                    <code>num</code> - amount of spins to show. Default <code>1</code>
-                </li>
-                <li>
-                    <code>sharing</code> - whether to show sharing links. Default <code>false</code></li>
-                <li>
-                    <code>time</code> - whether to show timestamps at the start of a line. Default
-                    <code>false</code></li>
-                <li>
-                    <code>nolinks</code> - whether to hide links to the dj, station, music pages. Default
-                    <code>false</code>
-                </li>
-            </ul>
+            <p>Available parameters:</p>
+            <table>
+                <thead>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Use</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><code>station</code></td>
+                    <td>Station id, e.g. &quot;wzbc&quot;. Mandatory</td>
+                </tr>
+                <tr>
+                    <td><code>num</code></td>
+                    <td>Number of spins. Default is &quot;1&quot;. Use negative number to reverse the order, e.g. &quot;1&quot;,
+                        &quot;-5&quot;.
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>sharing</code></td>
+                    <td>Set to &quot;1&quot; to request Twitter and Facebook share links in the markup.</td>
+                </tr>
+                <tr>
+                    <td><code>time</code></td>
+                    <td>Set to &quot;1&quot; to request timestamps at the start of a line. Default is “… spun by …”
+                        clause
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>nolinks</code></td>
+                    <td>Set to &quot;1&quot; to request no links in the response.</td>
+                </tr>
+                </tbody>
+            </table>
 
             <p class="github">
                 <a href="https://github.com/spinitron/v2-web-integration" target="_blank">Source code</a> for this demo

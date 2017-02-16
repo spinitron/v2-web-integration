@@ -33,21 +33,32 @@
                 <h1>Upcoming Shows</h1>
                 <h2>Upcoming 3 shows</h2>
             </header>
-            <iframe src="https://spinitron.com/v2/widget/upcoming-shows?station=wzbc&count=3"></iframe>
+            <iframe src="https://v2.spinitrion.com/widget/upcoming-shows?station=wzbc&count=3"></iframe>
         </div>
 
         <div class="widget-docs">
             <p>This page shows how you can put upcoming shows in an iframe.</p>
 
-            <p>Available options:</p>
-            <ul>
-                <li>
-                    <code>station</code> - the station name
-                </li>
-                <li>
-                    <code>count</code> - amount of shows to show. Default <code>1</code>
-                </li>
-            </ul>
+            <p>Available parameters:</p>
+            <table>
+                <thead>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Use</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><code>station</code></td>
+                    <td>Station id, e.g. &quot;wzbc&quot;. Mandatory</td>
+                </tr>
+                <tr>
+                    <td><code>count</code></td>
+                    <td>Number of shows. Default is &quot;1&quot;.
+                    </td>
+                </tr>
+                </tbody>
+            </table>
 
             <p class="github">
                 <a href="https://github.com/spinitron/v2-web-integration" target="_blank">Source code</a> for this demo
