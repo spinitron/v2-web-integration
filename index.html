@@ -14,34 +14,29 @@
 </head>
 <body>
 <div class="header-container">
-    <header class="wrapper">
-        <h1 class="title"></h1>
+    <header>
         <nav>
-            <ul>
-                <li><a href="/">Now Playing</a></li>
-                <li><a href="/playlist.html">Current Playlist</a></li>
-                <li><a href="/shows.html">Upcoming Shows</a></li>
-                <li><a href="/widget.html">JS Widget</a></li>
-            </ul>
+            <a href="/">Now Playing</a>
+            <a href="/playlist.html">Current Playlist</a>
+            <a href="/shows.html">Upcoming Shows</a>
+            <a href="/widget.html">JS Widget</a>
         </nav>
     </header>
 </div>
 
 <div class="main-container">
-    <div class="main wrapper">
-        <div class="widget-box">
-            <h1>Now Playing</h1>
-            <h2>Most recent 5 spins</h2>
-            <div id="spin-wrap">
-                <iframe id="spin-iframe" class="spin-songs"
-                        src="http://spinitron.com/public/newestsong.php?num=5&station=wzbc&time=1&tweets=1">
-                </iframe>
-            </div>
+    <div class="main">
+        <h1>Now Playing widget</h1>
+
+        <div class="widget-box now-playing">
+            <header>
+                <h1>Now Playing</h1>
+                <h2>Most recent 5 spins</h2>
+            </header>
+            <iframe src="https://spinitron.com/v2/widget/now-playing?station=wzbc&num=5&time=1&tweets=1"></iframe>
         </div>
 
         <div class="widget-docs">
-            <h1>Now Playing widget</h1>
-
             <h2>Put most recent songs in an iframe</h2>
 
             <p>This page shows how you can put the recent spins in an iframe. The iframe's height is set
