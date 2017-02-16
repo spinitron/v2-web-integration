@@ -1,111 +1,166 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="">
 <head>
-    <meta charset="UTF-8">
-    <title>Spinitron Web Integration</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
 </head>
 <body>
 
-<div>
-    <p>
-        Widgets can be accessed in either <code>http</code> or <code>jsonp</code> formats.
-    </p>
-    <p>If <code>jsonp</code> format is used, you must specify <code>callback</code> query param.</p>
-    <p>
-        <strong>All examples are shown for "wzbc" station.</strong>
-    </p>
+<div class="header-container">
+    <header class="wrapper clearfix">
+        <h1 class="title">Spinitron v2. Web Integration</h1>
+        <!--<nav>-->
+        <!--<ul>-->
+        <!--<li><a href="/now-playing.html">Now Playing widget</a></li>-->
+        <!--<li><a href="/upcoming-shows.html">Upcoming Shows widget</a></li>-->
+        <!--<li><a href="/current-playlist.html">Current Playlist widget</a></li>-->
+        <!--</ul>-->
+        <!--</nav>-->
+    </header>
 </div>
 
-<div class="widget">
-    <h1>Now Playing widget</h1>
-    <div>
-        <p>You can access the "/widget/now-playing" endpoint to display most recent station spins.</p>
-        <p>Available options:</p>
-        <ul>
-            <li>
-                <code>staion</code> - the station name
-            </li>
-            <li>
-                <code>num</code> - amount of spins to show. Default <code>1</code>
-            </li>
-            <li>
-                <code>sharing</code> - whether to show sharing links. Default <code>false</code></li>
-            <li>
-                <code>time</code> - whether to show timestamps at the start of a line. Default <code>false</code></li>
-            <li>
-                <code>nolinks</code> - whether to hide links to the dj, station, music pages. Default <code>false</code>
-            </li>
-        </ul>
-    </div>
+<div class="main-container">
+    <div class="main wrapper clearfix">
+        <aside>
+            <h3>Widgets</h3>
+            <nav>
+                <ul>
+                    <li><a href="#now-playing">Now Playing</a></li>
+                    <li><a href="#upcoming-shows">Upcoming Shows</a></li>
+                    <li><a href="#current-playlist">Current Playlist</a></li>
+                </ul>
+            </nav>
+        </aside>
 
-    <div>
-        <h2>Examples</h2>
+        <article>
+            <header>
+                <h1>Spinitron Widgets</h1>
+                <p>
+                    Widgets can be accessed in either <code>http</code> or <code>jsonp</code> formats.
+                </p>
+                <p>If <code>jsonp</code> format is used, you must specify <code>callback</code> query param.</p>
+                <p>
+                    <strong>All examples are shown for "wzbc" station.</strong>
+                </p>
+            </header>
+            <section id="now-playing" class="widget">
+                <h2>Now Playing widget</h2>
+                <div>
+                    <p>You can access the "/widget/now-playing" endpoint to display most recent station spins.</p>
+                    <p>Available options:</p>
+                    <ul>
+                        <li>
+                            <code>staion</code> - the station name
+                        </li>
+                        <li>
+                            <code>num</code> - amount of spins to show. Default <code>1</code>
+                        </li>
+                        <li>
+                            <code>sharing</code> - whether to show sharing links. Default <code>false</code></li>
+                        <li>
+                            <code>time</code> - whether to show timestamps at the start of a line. Default
+                            <code>false</code></li>
+                        <li>
+                            <code>nolinks</code> - whether to hide links to the dj, station, music pages. Default <code>false</code>
+                        </li>
+                    </ul>
+                </div>
 
-        <p>No params. <code>https://spinitron.com/v2/widget/now-playing?station=wzbc</code></p>
-        <iframe src="https://spinitron.com/v2/widget/now-playing?station=wzbc"></iframe>
+                <div>
+                    <h3>Examples</h3>
 
-        <p>Num: 3. <code>https://spinitron.com/v2/widget/now-playing?station=wzbc&num=3</code></p>
-        <iframe src="https://spinitron.com/v2/widget/now-playing?station=wzbc&num=3"></iframe>
+                    <p>No params. <code>https://spinitron.com/v2/widget/now-playing?station=wzbc</code></p>
+                    <iframe src="https://spinitron.com/v2/widget/now-playing?station=wzbc"></iframe>
 
-        <p>Sharing links enabled. <code>https://spinitron.com/v2/widget/now-playing?station=wzbc&sharing=1</code>
-        </p>
-        <iframe src="https://spinitron.com/v2/widget/now-playing?station=wzbc&sharing=1"></iframe>
+                    <p>Num: 3. <code>https://spinitron.com/v2/widget/now-playing?station=wzbc&num=3</code></p>
+                    <iframe src="https://spinitron.com/v2/widget/now-playing?station=wzbc&num=3"></iframe>
 
-        <p>Timestamps enabled. <code>https://spinitron.com/v2/widget/now-playing?station=wzbc&time=1</code></p>
-        <iframe src="https://spinitron.com/v2/widget/now-playing?station=wzbc&time=1"></iframe>
+                    <p>Sharing links enabled.
+                        <code>https://spinitron.com/v2/widget/now-playing?station=wzbc&sharing=1</code>
+                    </p>
+                    <iframe src="https://spinitron.com/v2/widget/now-playing?station=wzbc&sharing=1"></iframe>
 
-        <p>Dj/station/music links disabled.
-            <code>https://spinitron.com/v2/widget/now-playing?station=wzbc&nolinks=true</code></p>
-        <iframe src="https://spinitron.com/v2/widget/now-playing?station=wzbc&nolinks=1"></iframe>
-    </div>
+                    <p>Timestamps enabled. <code>https://spinitron.com/v2/widget/now-playing?station=wzbc&time=1</code>
+                    </p>
+                    <iframe src="https://spinitron.com/v2/widget/now-playing?station=wzbc&time=1"></iframe>
+
+                    <p>Dj/station/music links disabled.
+                        <code>https://spinitron.com/v2/widget/now-playing?station=wzbc&nolinks=true</code></p>
+                    <iframe src="https://spinitron.com/v2/widget/now-playing?station=wzbc&nolinks=1"></iframe>
+                </div>
+            </section>
+            <section id="upcoming-shows" class="widget">
+                <h2>Upcoming Shows widget</h2>
+                <div>
+                    <p>You can access the "/widget/upcoming-shows" endpoint to display upcoming shows.</p>
+                    <p>Available options:</p>
+                    <ul>
+                        <li>
+                            <code>staion</code> - the station name
+                        </li>
+                        <li>
+                            <code>count</code> - amount of shows to show. Default <code>1</code>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Examples</h3>
+
+                    <p>No params. <code>https://spinitron.com/v2/widget/upcoming-shows?station=wzbc</code></p>
+                    <iframe src="https://spinitron.com/v2/widget/upcoming-shows?station=wzbc"></iframe>
+
+                    <p>Count: 3. <code>https://spinitron.com/v2/widget/upcoming-shows?station=wzbc&count=3</code></p>
+                    <iframe src="https://spinitron.com/v2/widget/upcoming-shows?station=wzbc&count=3"></iframe>
+                </div>
+            </section>
+            <section id="current-playlist" class="widget">
+                <h2>Current Playlist widget</h2>
+                <div>
+                    <p>
+                        You can access the "/widget/current-playlist" endpoint to display current station playlist or if
+                        there is
+                        none at the moment, currently on-air show and most recent playlist will be displayed.
+                    </p>
+                    <p>Available options:</p>
+                    <ul>
+                        <li>
+                            <code>staion</code> - the station name
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Examples</h3>
+
+                    <p>No params. <code>https://spinitron.com/v2/widget/current-playlist?station=wzbc</code></p>
+                    <iframe src="https://spinitron.com/v2/widget/current-playlist?station=wzbc"></iframe>
+                </div>
+            </section>
+        </article>
+
+    </div> <!-- #main -->
+</div> <!-- #main-container -->
+
+<div class="footer-container">
+    <footer class="wrapper">
+        Copyright © 2016 Spinitron, LLC. All rights reserved.
+    </footer>
 </div>
-<div class="widget">
-    <h1>Upcoming Shows widget</h1>
-    <div>
-        <p>You can access the "/widget/upcoming-shows" endpoint to display upcoming shows.</p>
-        <p>Available options:</p>
-        <ul>
-            <li>
-                <code>staion</code> - the station name
-            </li>
-            <li>
-                <code>count</code> - amount of shows to show. Default <code>1</code>
-            </li>
-        </ul>
-    </div>
 
-    <div>
-        <h2>Examples</h2>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>-->
 
-        <p>No params. <code>https://spinitron.com/v2/widget/upcoming-shows?station=wzbc</code></p>
-        <iframe src="https://spinitron.com/v2/widget/upcoming-shows?station=wzbc"></iframe>
-
-        <p>Count: 3. <code>https://spinitron.com/v2/widget/upcoming-shows?station=wzbc&count=3</code></p>
-        <iframe src="https://spinitron.com/v2/widget/upcoming-shows?station=wzbc&count=3"></iframe>
-    </div>
-</div>
-<div class="widget">
-    <h1>Current Playlist widget</h1>
-    <div>
-        <p>
-            You can access the "/widget/current-playlist" endpoint to display current station playlist or if there is
-            none at the moment, currently on-air show and most recent playlist will be displayed.
-        </p>
-        <p>Available options:</p>
-        <ul>
-            <li>
-                <code>staion</code> - the station name
-            </li>
-        </ul>
-    </div>
-
-    <div>
-        <h2>Examples</h2>
-
-        <p>No params. <code>https://spinitron.com/v2/widget/current-playlist?station=wzbc</code></p>
-        <iframe src="https://spinitron.com/v2/widget/current-playlist?station=wzbc"></iframe>
-    </div>
-</div>
-
+<script src="js/main.js"></script>
 </body>
 </html>
