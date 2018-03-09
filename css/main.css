@@ -186,6 +186,12 @@ header nav a:hover {
     height: 25em;
 }
 
+.widget-box.playlist iframe {
+    height: 100em;
+}
+
+
+
 /* ==============
     MOBILE: Content
    ============== */
@@ -243,6 +249,12 @@ header nav a:hover {
         width: 40%;
         margin: 0 0 1em 2em;
         box-shadow: 0 0 0.2em 0.2em #e7e7e7;
+    }
+
+    .widget-box.playlist {
+        float: initial;
+        width: initial;
+        margin: initial;
     }
 }
 
