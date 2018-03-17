@@ -190,6 +190,28 @@ header nav a:hover {
     height: 100em;
 }
 
+.spinitron-js-widget .spunpart,
+.spinitron-js-widget .diskpart,
+.spinitron-js-widget .labelpart {
+    display: none;
+}
+
+.spinitron-js-widget {
+    margin-top: 1em;
+}
+
+.spinitron-js-widget .show {
+    margin: 0.5em 0 0;
+}
+
+.spinitron-js-widget .show .begin {
+    font-weight: bolder;
+    padding-right: 0.25em;
+}
+
+.playlist.spins .spin-art > img {
+    max-width: 4em;
+}
 
 
 /* ==============
