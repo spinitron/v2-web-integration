@@ -16,22 +16,28 @@
     <header>
         <nav>
             <a href="index.html">Now Playing</a>
+            <a href="widget.html">Now Playing JS</a>
             <a href="playlist.html">Current Playlist</a>
+            <a href="playlist-js.html">Current JS</a>
             <a href="shows.html">Upcoming Shows</a>
-            <a href="widget.html">JS Widget</a>
+            <a href="shows-js.html">Upcoming JS</a>
         </nav>
     </header>
 </div>
 
 <div class="main-container">
     <div class="main">
-        <h1>Current Playlist widget</h1>
+        <h1>Current Playlist iframe widget</h1>
 
         <div class="widget-docs">
             <h2>Most recent playlist and/or show</h2>
 
             <p>This page shows how you can put the current playlist in an iframe.</p>
-            <p>If no playlist is currently playing, currently on-air show and most recent playlist are displayed.</p>
+
+            <p class="github">
+                <a href="https://github.com/spinitron/v2-web-integration" target="_blank">Source code</a> for this demo web site is on
+                Github
+            </p>
 
             <p>Available parameters:</p>
             <table>
@@ -49,12 +55,13 @@
                 </tbody>
             </table>
 
-            <p class="github">
-                <a href="https://github.com/spinitron/v2-web-integration" target="_blank">Source code</a> for this demo web site is on
-                Github
-            </p>
+            <p>If no playlist is currently playing, currently on-air show and most recent playlist are displayed.</p>
 
-            <p>Set the styles for the iframe contents in Spinitron. Go to Admin: Station settings: Custom stylesheet.</p>
+            <p class="clearfix">Set the styles for the iframe contents in Spinitron. Go to Admin: Station settings: Custom stylesheet.</p>
+
+            <p>The example iframe on this page is</p>
+
+            <pre><code>&lt;iframe src="//widgets.spinitron.com/widget/current-playlist?station=wzbc"&gt;&lt;/iframe&gt;</code></pre>
         </div>
 
         <div class="widget-box playlist">

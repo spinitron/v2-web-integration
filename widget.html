@@ -20,7 +20,6 @@
             margin: 0;
             display: flex;
             flex-direction: column;
-            height: 20em;
         }
 
         .widget-box h1 {
@@ -60,72 +59,64 @@
     <header>
         <nav>
             <a href="index.html">Now Playing</a>
+            <a href="widget.html">Now Playing JS</a>
             <a href="playlist.html">Current Playlist</a>
+            <a href="playlist-js.html">Current JS</a>
             <a href="shows.html">Upcoming Shows</a>
-            <a href="widget.html">JS Widget</a>
+            <a href="shows-js.html">Upcoming JS</a>
         </nav>
     </header>
 </div>
 
 <div class="main-container">
     <div class="main">
-        <h1>Now Playing JavaScript Widget</h1>
+        <h1>Now-playing JS widget</h1>
 
         <div class="widget-box now-playing">
             <header>
                 <h1>Recent spins on WZBC</h1>
             </header>
+
             <div data-station="wzbc" data-num="5" data-time="1" data-sharing="1" id="spinitron-nowplaying"></div>
             <script async src="https://spinitron.com/static/js/npwidget.js"></script>
         </div>
 
         <div class="widget-docs">
-            <p>
-                The Now Playing JavaScript Widget puts the most recent spins on your web page without needing an iframe
-                or use of the SpinPapi API.
-                A small script fetches markup for recent spins from Spinitron and puts it into a container element on
-                your page.
-            </p>
+            <h2>Put recent spins on your page with JavaScript</h2>
 
-            <p class="github">
-                <a href="https://github.com/spinitron/v2-web-integration" target="_blank">Source code</a> for this demo
-                web site is on Github
-            </p>
+            <p>The Now Playing JavaScript Widget puts the most recent spins on your web page without needing an iframe
+                or use of the SpinPapi API. A small script fetches markup for recent spins from Spinitron and puts it
+                into a container element on your page.</p>
+
+            <p class="github"><a href="https://github.com/spinitron/v2-web-integration" target="_blank">Source code</a>
+                for this demo web site is on Github</p>
 
             <p>The widget has three advantages over iframes.</p>
 
             <ol>
-                <li><p>
-                    It's easier to style because the markup is on your page rather than in a separate page that
-                    the client loads into the iframe. Add style rules for the widget's markup in your page or one of
-                    its stylesheets.
-                </p></li>
-                <li><p>
-                    The widget container automatically assumes the height of its contents (unless you
-                    specify otherwise). It's hard to do that with an iframe so most often they have a specified
-                    static height.
-                </p></li>
+                <li><p>It's easier to style because the markup is on your page rather than in a separate page that the
+                    client loads into the iframe. Just add widget styles to the page's styles.</p></li>
+
+                <li><p>The widget container automatically assumes the height of its contents. It's hard to do that with
+                    an iframe so most often they have a specified static height.</p></li>
+
                 <li><p>It loads faster and with less flicker.</p></li>
             </ol>
 
-            <p>
-                To use the widget, put a container element, a <code>div</code> for example, on your page in which the
+            <p>To use the widget, put a container element, a <code>div</code> for example, on your page in which the
                 recent spins should appear, followed by the widget script. Set the container element's <code>ID</code>
                 attribute to <code>spinitron-nowplaying</code>, so the widget can find it, and add a <code>data</code>
-                element to identify your station like this:
-            </p>
+                element to identify your station like this:</p>
 
             <!--
             <div data-station="wzbc" id="spinitron-nowplaying"></div>
             <script src="https://spinitron.com/static/js/npwidget.js"></script>
             -->
-            <pre>&lt;div data-station=&quot;wzbc&quot; id=&quot;spinitron-nowplaying&quot;&gt;&lt;/div&gt;
-&lt;script src=&quot;https://spinitron.com/static/js/npwidget.js&quot;&gt;&lt;/script&gt;</pre>
+            <pre><code>&lt;div data-station=&quot;wzbc&quot; id=&quot;spinitron-nowplaying&quot;&gt;&lt;/div&gt;
+&lt;script src=&quot;https://spinitron.com/static/js/npwidget.js&quot;&gt;&lt;/script&gt;</code></pre>
 
-            <p>
-                Now you can style the now playing display by adding style rules to the page or one of its stylesheets.
-                This page is an example – view this page's source or or below for the markup and styles.
-            </p>
+            <p>Now you can style the now playing display by adding style rules to the page or one of its stylesheets.
+                This page is an example – view this page's source or or below for the markup and styles.</p>
 
             <p>Other parameters that control the widget are described in the table.</p>
 
@@ -136,6 +127,7 @@
                     <th>Use</th>
                 </tr>
                 </thead>
+
                 <tbody>
                 <tr>
                     <td><code>station</code></td>
@@ -143,9 +135,7 @@
                 </tr>
                 <tr>
                     <td><code>num</code></td>
-                    <td>Number of spins. Default is &quot;1&quot;. Use negative number to reverse the order, e.g. &quot;1&quot;,
-                        &quot;-5&quot;.
-                    </td>
+                    <td>Number of spins. Default is &quot;1&quot;. Use negative number to reverse the order, e.g. &quot;1&quot;, &quot;-5&quot;.</td>
                 </tr>
                 <tr>
                     <td><code>sharing</code></td>
@@ -153,9 +143,7 @@
                 </tr>
                 <tr>
                     <td><code>time</code></td>
-                    <td>Set to &quot;1&quot; to request timestamps at the start of a line. Default is “… spun by …”
-                        clause
-                    </td>
+                    <td>Set to &quot;1&quot; to request timestamps at the start of a line. Default is “… spun by …” clause</td>
                 </tr>
                 <tr>
                     <td><code>nolinks</code></td>
@@ -187,7 +175,6 @@
     margin: 0;
     display: flex;
     flex-direction: column;
-    height: 20em;
 }
 
 .widget-box h1 {
@@ -225,9 +212,9 @@
             <h3>Note</h3>
 
             <p>The widget requires a <code>&lt;script&gt;</code> element on the page, which some CMS and blog services
-                block – wordpress.com does, blogger.com does not. But that doesn&#39;t me you can&#39;t
-                use it in WordPress – you probably can if you have your own instance but with the commercial
-                wordpress.com service you&#39;re out of luck.</p>
+                block – wordpress.com does, blogger.com does not. But that doesn&#39;t me you can&#39;t use it in
+                WordPress – you probably can if you have your own instance but with the commercial wordpress.com service
+                you&#39;re out of luck.</p>
         </div>
     </div> <!-- #main -->
 </div> <!-- #main-container -->

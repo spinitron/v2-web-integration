@@ -16,18 +16,20 @@
     <header>
         <nav>
             <a href="index.html">Now Playing</a>
+            <a href="widget.html">Now Playing JS</a>
             <a href="playlist.html">Current Playlist</a>
+            <a href="playlist-js.html">Current JS</a>
             <a href="shows.html">Upcoming Shows</a>
-            <a href="widget.html">JS Widget</a>
+            <a href="shows-js.html">Upcoming JS</a>
         </nav>
     </header>
 </div>
 
 <div class="main-container">
     <div class="main">
-        <h1>Now Playing widget</h1>
+        <h1>Now-playing iframe widget</h1>
 
-        <div class="widget-box now-playing">
+        <div class="widget-box now-playing iframe">
             <header>
                 <h1>Now Playing</h1>
                 <h2>Most recent 5 spins with timestamps and enabled sharing</h2>
@@ -36,10 +38,17 @@
         </div>
 
         <div class="widget-docs">
-            <h2>Put most recent songs in an iframe</h2>
+            <h2>Most recent spins in an iframe</h2>
 
             <p>This page shows how you can put the recent spins in an iframe.</p>
-            <p>The iframe's height is set by this page's stylesheet. It does not adjust according to the height of the
+
+            <p class="github">
+                <a href="https://github.com/spinitron/v2-web-integration" target="_blank">Source code</a> for this demo
+                web site is on
+                Github
+            </p>
+
+            <p>The iframe's height is set by the page's stylesheet. It does not adjust according to the height of the
                 content.</p>
 
             <p>Available parameters:</p>
@@ -78,13 +87,11 @@
                 </tbody>
             </table>
 
-            <p class="github">
-                <a href="https://github.com/spinitron/v2-web-integration" target="_blank">Source code</a> for this demo
-                web site is on
-                Github
-            </p>
+            <p class="clearfix">Set the styles for the iframe contents in Spinitron. Go to Admin: Station settings: Custom stylesheet.</p>
 
-            <p>Set the styles for the iframe contents in Spinitron. Go to Admin: Station settings: Custom stylesheet.</p>
+            <p>The example iframe on this page is</p>
+
+            <pre><code>&lt;iframe src="//widgets.spinitron.com/widget/now-playing?station=wzbc&amp;num=5&amp;time=1&amp;sharing=1"&gt;&lt;/iframe&gt;</code></pre>
         </div>
     </div> <!-- #main -->
 </div> <!-- #main-container -->

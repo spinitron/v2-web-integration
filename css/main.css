@@ -160,6 +160,10 @@ header nav a:hover {
     flex-direction: column;
 }
 
+.widget-box.iframe {
+    height: 25em;
+}
+
 .widget-box h1 {
     font-weight: normal;
     font-size: 1.4em;
@@ -180,10 +184,6 @@ header nav a:hover {
     flex-grow: 1;
     border: none;
     width: 100%;
-}
-
-.widget-box.now-playing {
-    height: 25em;
 }
 
 .widget-box.playlist iframe {
@@ -300,7 +300,6 @@ pre > code {
 pre {
     background-color: #f8f8f8;
     border: 1px solid #ccc;
-    font-size: 0.81em;
     line-height: 1.5;
     overflow: auto;
     padding: 0.3em 0.6em;
@@ -310,4 +309,16 @@ pre {
 pre code {
     background-color: transparent;
     border: 0
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
 }

@@ -9,6 +9,20 @@
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
+    <style>
+        .spinitron-js-widget {
+            margin-top: 1em;
+        }
+
+        .spinitron-js-widget .show {
+            margin: 0.5em 0 0;
+        }
+
+        .spinitron-js-widget .show .begin {
+            font-weight: bolder;
+            padding-right: 0.25em;
+        }
+    </style>
 </head>
 <body>
 <div class="header-container">
@@ -26,18 +40,19 @@
 
 <div class="main-container">
     <div class="main">
-        <h1>Upcoming shows iframe widget</h1>
+        <h1>Upcoming shows JS widget</h1>
 
-        <div class="widget-box iframe">
+        <div class="widget-box">
             <header>
                 <h1>Upcoming Shows</h1>
             </header>
 
-            <iframe src="//widgets.spinitron.com/widget/upcoming-shows?station=wzbc&count=5"></iframe>
+            <div data-station="wzbc" data-count="5" data-action="upcoming-shows" class="spinitron-js-widget"></div>
+            <script async src="//spinitron.com/static/js/widget.js"></script>
         </div>
 
         <div class="widget-docs">
-            <p>This page shows how you can put upcoming shows in an iframe.</p>
+            <p>This page shows how you can put upcoming shows on the page using the JavaScript widget.</p>
 
             <p>Available parameters:</p>
             <table>
@@ -69,7 +84,8 @@
 
             <p>The example iframe on this page is</p>
 
-            <pre><code>&lt;iframe src="//widgets.spinitron.com/widget/upcoming-shows?station=wzbc&amp;count=5"&gt;&lt;/iframe&gt;</code></pre>
+            <pre><code>&lt;div data-station="wzbc" data-count="5" data-action="upcoming-shows" class="spinitron-js-widget"&gt;&lt;/div&gt;
+&lt;script async src="//spinitron.com/static/js/widget.js"&gt;&lt;/script&gt;</code></pre>
         </div>
     </div> <!-- #main -->
 </div> <!-- #main-container -->

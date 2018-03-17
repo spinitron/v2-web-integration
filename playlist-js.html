@@ -3,12 +3,18 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Upcoming shows</title>
-    <meta name="Description" content="Demonstrates embedding Spinitron upcoming shows on your web site.">
+    <title>Current playlist</title>
+    <meta name="Description" content="Demonstrates embedding a Spinitron playlist on your web site.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
+    <style>
+        .playlist.spins .spin-art > img {
+            max-width: 4em;
+        }
+    </style>
 </head>
 <body>
 <div class="header-container">
@@ -26,18 +32,17 @@
 
 <div class="main-container">
     <div class="main">
-        <h1>Upcoming shows iframe widget</h1>
-
-        <div class="widget-box iframe">
-            <header>
-                <h1>Upcoming Shows</h1>
-            </header>
-
-            <iframe src="//widgets.spinitron.com/widget/upcoming-shows?station=wzbc&count=5"></iframe>
-        </div>
+        <h1>Current Playlist iframe widget</h1>
 
         <div class="widget-docs">
-            <p>This page shows how you can put upcoming shows in an iframe.</p>
+            <h2>Most recent playlist and/or show</h2>
+
+            <p>This page shows how you can put the current playlist in an iframe.</p>
+
+            <p class="github">
+                <a href="https://github.com/spinitron/v2-web-integration" target="_blank">Source code</a> for this demo web site is on
+                Github
+            </p>
 
             <p>Available parameters:</p>
             <table>
@@ -50,26 +55,24 @@
                 <tbody>
                 <tr>
                     <td><code>station</code></td>
-                    <td>Station id, e.g. &quot;wzbc&quot;. Mandatory</td>
-                </tr>
-                <tr>
-                    <td><code>count</code></td>
-                    <td>Number of shows. Default is &quot;1&quot;.
-                    </td>
+                    <td>Station id, e.g. "wzbc". Mandatory</td>
                 </tr>
                 </tbody>
             </table>
 
-            <p class="github">
-                <a href="https://github.com/spinitron/v2-web-integration" target="_blank">Source code</a> for this demo
-                web site is on Github
-            </p>
+            <p>If no playlist is currently playing, currently on-air show and most recent playlist are displayed.</p>
 
             <p class="clearfix">Set the styles for the iframe contents in Spinitron. Go to Admin: Station settings: Custom stylesheet.</p>
 
             <p>The example iframe on this page is</p>
 
-            <pre><code>&lt;iframe src="//widgets.spinitron.com/widget/upcoming-shows?station=wzbc&amp;count=5"&gt;&lt;/iframe&gt;</code></pre>
+            <pre><code>&lt;div data-station="wzbc" data-action="current-playlist" class="spinitron-js-widget"&gt;&lt;/div&gt;
+&lt;script async src="//spinitron.com/static/js/widget.js"&gt;&lt;/script&gt;</code></pre>
+        </div>
+
+        <div class="widget-box playlist">
+            <div data-station="wzbc" data-action="current-playlist" class="spinitron-js-widget"></div>
+            <script async src="//spinitron.com/static/js/widget.js"></script>
         </div>
     </div> <!-- #main -->
 </div> <!-- #main-container -->
