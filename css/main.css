@@ -180,13 +180,14 @@ header nav a:hover {
     margin: 0.5em 0;
 }
 
-.widget-box iframe {
+.widget-box iframe,
+.playlist iframe {
     flex-grow: 1;
     border: none;
     width: 100%;
 }
 
-.widget-box.playlist iframe {
+.playlist iframe {
     height: 100em;
 }
 
@@ -209,10 +210,88 @@ header nav a:hover {
     padding-right: 0.25em;
 }
 
-.playlist.spins .spin-art > img {
-    max-width: 4em;
+.playlist.spins table {
+    border-collapse: collapse;
 }
 
+.playlist.spins td {
+    vertical-align: top;
+    padding: 0.2em 0.4em;
+}
+
+.playlist.spins tr:nth-child(2n) td {
+    background: #eee;
+}
+
+.playlist.spins .spin-time {
+    white-space: nowrap;
+    font-size: 85%;
+    color: #555;
+}
+
+.playlist.spins .spin-art {
+    padding: 0.2rem 0;
+}
+
+.playlist.spins .spin-art img {
+    max-width: 4rem;
+    border: 1px solid #eee;
+}
+
+.playlist.spins .spin-art > div {
+    width: 4rem;
+    height: 4rem;
+    border: 1px solid #ddd;
+}
+
+.playlist.spins .spin-text .artist {
+    font-weight: bolder;
+    color: maroon;
+}
+
+.playlist.spins .spin-text .song:before {
+    content: "‘";
+}
+
+.playlist.spins .spin-text .song:after {
+    content: "’";
+}
+
+.playlist.spins .spin-text .release {
+    font-style: oblique;
+    color: maroon;
+}
+
+.playlist.spins .spin-text .release:before {
+    color: #555;
+    font-style: initial;
+    content: "from ";
+}
+
+.playlist.spins .spin-text .parenthesis {
+    color: #555;
+}
+
+.playlist.spins .spin-text .parenthesis:before {
+    content: "(";
+}
+
+.playlist.spins .spin-text .parenthesis:after {
+    content: ")";
+}
+
+.playlist.spins .spin-text .parenthesis > *:nth-last-child(n+2):after,
+.playlist.spins .spin-text .references > *:nth-last-child(n+2):after {
+    content: ",";
+}
+
+.playlist.spins .spin-text .local,
+.playlist.spins .spin-text .request,
+.playlist.spins .spin-text .va,
+.playlist.spins .spin-text .new {
+    font-size: 0.8em;
+    font-weight: bolder;
+}
 
 /* ==============
     MOBILE: Content
@@ -272,14 +351,7 @@ header nav a:hover {
         margin: 0 0 1em 2em;
         box-shadow: 0 0 0.2em 0.2em #e7e7e7;
     }
-
-    .widget-box.playlist {
-        float: initial;
-        width: initial;
-        margin: initial;
-    }
 }
-
 
 /* ==========================================================================
    Helper classes
@@ -338,9 +410,11 @@ pre code {
     content: " ";
     display: table;
 }
+
 .clearfix:after {
     clear: both;
 }
+
 .clearfix {
     *zoom: 1;
 }

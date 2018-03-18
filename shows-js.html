@@ -14,12 +14,9 @@
 <div class="header-container">
     <header>
         <nav>
-            <a href="index.html">Now Playing</a>
-            <a href="widget.html">Now Playing JS</a>
-            <a href="playlist.html">Current Playlist</a>
-            <a href="playlist-js.html">Current JS</a>
-            <a href="shows.html">Upcoming Shows</a>
-            <a href="shows-js.html">Upcoming JS</a>
+            <a href="index.html">Now Playing</a> <a href="widget.html">Now Playing JS</a> <a href="playlist.html">Current
+            Playlist</a> <a href="playlist-js.html">Current JS</a> <a href="shows.html">Upcoming Shows</a> <a
+            href="shows-js.html">Upcoming JS</a>
         </nav>
     </header>
 </div>
@@ -30,7 +27,7 @@
 
         <div class="widget-box">
             <header>
-                <h1>Upcoming Shows</h1>
+                <h1>Upcoming Shows using JavaScript</h1>
             </header>
 
             <div data-station="wzbc" data-count="5" data-action="upcoming-shows" class="spinitron-js-widget"></div>
@@ -38,7 +35,14 @@
         </div>
 
         <div class="widget-docs">
-            <p>This page shows how you can put upcoming shows on the page using the JavaScript widget.</p>
+            <p class="github"><a href="https://github.com/spinitron/v2-web-integration">Source code</a>
+                for this demo web site is on Github</p>
+
+            <h2>Upcoming shows using JavaScript</h2>
+
+            <p><a href="https://github.com/spinitron/v2-web-integration/blob/master/shows-js.html">This page</a> shows
+                how you can put upcoming shows on the page using the Spinitron JavaScript Widget. See
+                <a href="widget.html">Now-Playing JS</a> for general info on the widget.</p>
 
             <p>Available parameters:</p>
             <table>
@@ -61,11 +65,6 @@
                 </tbody>
             </table>
 
-            <p class="github">
-                <a href="https://github.com/spinitron/v2-web-integration" target="_blank">Source code</a> for this demo
-                web site is on Github
-            </p>
-
             <p class="clearfix">Set the styles for the widget together with page styles.</p>
 
             <p>The example iframe on this page is</p>
@@ -73,6 +72,8 @@
             <pre><code>&lt;div data-station="wzbc" data-count="5" data-action="upcoming-shows" class="spinitron-js-widget"&gt;&lt;/div&gt;
 &lt;script async src="//spinitron.com/static/js/widget.js"&gt;&lt;/script&gt;</code></pre>
         </div>
+
+        <p>See also the <a href="https://spinitron.com/v2-api-demo/">API demo</a></p>
     </div> <!-- #main -->
 </div> <!-- #main-container -->
 
