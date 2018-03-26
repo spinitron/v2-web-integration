@@ -181,13 +181,13 @@ header nav a:hover {
 }
 
 .widget-box iframe,
-.playlist iframe {
+.large iframe {
     flex-grow: 1;
     border: none;
     width: 100%;
 }
 
-.playlist iframe {
+.large iframe {
     height: 100em;
 }
 
