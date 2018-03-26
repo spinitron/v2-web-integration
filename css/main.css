@@ -351,6 +351,17 @@ header nav a:hover {
         margin: 0 0 1em 2em;
         box-shadow: 0 0 0.2em 0.2em #e7e7e7;
     }
+
+    .widget-box.widget-calendar {
+        float: none;
+        width: 100%;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .widget-calendar .main-container.widget {
+        margin-top: 0;
+    }
 }
 
 /* ==========================================================================
