@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Now playing</title>
+    <meta name="Description" content="Demonstrates embedding Spinitron most recent songs on your web site.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+<div class="header-container">
+    <header>
+        <nav>
+            <a href="index.html">Now Playing</a>
+            <a href="widget.html">Now Playing JS</a>
+            <a href="playlist.html">Current Playlist</a>
+            <a href="playlist-js.html">Current JS</a>
+            <a href="shows.html">Upcoming Shows</a>
+            <a href="shows-js.html">Upcoming JS</a>
+            <a href="schedule.html">Schedule</a>
+            <a href="np.html">Now Playing v2</a>
+            <a href="np-js.html">Now Playing v2 JS</a>
+        </nav>
+    </header>
+</div>
+
+<div class="main-container">
+    <div class="main">
+        <h1>Now-playing iframe widget</h1>
+
+        <div class="widget-box now-playing iframe">
+            <header>
+                <h1>Now Playing</h1>
+                <h2>Most recent 5 spins with enabled sharing, cover art, player and merch links</h2>
+            </header>
+            <iframe src="//widgets.spinitron.com/widget/now-playing-v2?station=wzbc&num=5&sharing=1&cover=1&player=1&merch=1"></iframe>
+        </div>
+
+        <div class="widget-docs">
+            <p class="github"><a href="https://github.com/spinitron/v2-web-integration">Source code</a>
+                for this demo web site is on Github</p>
+
+            <h2>Most recent spins in an iframe</h2>
+
+            <p><a href="https://github.com/spinitron/v2-web-integration/blob/master/index.html">This page</a>
+                shows how you can put the recent spins in an iframe.</p>
+
+            <p>The iframe's height is set by the page's stylesheet. It does not adjust according to the height of the
+                content.</p>
+
+            <p>Available parameters:</p>
+            <table>
+                <thead>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Use</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><code>station</code></td>
+                    <td>Station id, e.g. &quot;wzbc&quot;. Mandatory</td>
+                </tr>
+                <tr>
+                    <td><code>num</code></td>
+                    <td>Number of spins. Default is &quot;1&quot;. Use negative number to reverse the order, e.g. &quot;1&quot;,
+                        &quot;-5&quot;.
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>sharing</code></td>
+                    <td>Set to &quot;1&quot; to request Twitter and Facebook share links in the markup.
+                        If not set, station setting 'Display: "Enable Share to ... links"' is used to determine whether
+                        links should be displayed. Enabled by default.
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>cover</code></td>
+                    <td>Set to &quot;1&quot; to request cover art images in the markup.
+                        If not set, station setting 'Display: "Enable cover art on public pages"' is used to determine
+                        whether cover art should be displayed. Enabled by default.
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>player</code></td>
+                    <td>Set to &quot;1&quot; to request an ability to play songs preview from Apple Music.
+                        Enabled by default.
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>merch</code></td>
+                    <td>Set to &quot;1&quot; to request "Buy it!" links in the markup.
+                        If not set, station setting 'Display: "Enable Buy it! links"' is used to determine
+                        whether links should be displayed. Enabled by default.
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+            <p class="clearfix">Set the styles for the iframe contents in Spinitron. Go to Admin: Station settings:
+                Custom stylesheet.</p>
+
+            <p>The example iframe on this page is</p>
+
+            <pre><code>&lt;iframe src="//widgets.spinitron.com/widget/now-playing-v2?station=wzbc&num=5&sharing=1&cover=1&player=1&merch=1"&gt;&lt;/iframe&gt;</code></pre>
+
+            <p>See also the <a href="https://spinitron.com/v2-api-demo/">API demo</a></p>
+        </div>
+    </div> <!-- #main -->
+</div> <!-- #main-container -->
+
+</body>
+</html>
