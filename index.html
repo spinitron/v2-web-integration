@@ -33,9 +33,9 @@
         <div class="widget-box now-playing iframe">
             <header>
                 <h1>Now Playing</h1>
-                <h2>Most recent 5 spins with timestamps and enabled sharing</h2>
+                <h2>Most recent 5 spins with enabled sharing, cover art, player and "Buy it" links</h2>
             </header>
-            <iframe src="//widgets.spinitron.com/widget/now-playing?station=wzbc&num=5&time=1&sharing=1"></iframe>
+            <iframe src="//widgets.spinitron.com/widget/now-playing-v2?station=wzbc&num=5&sharing=1&cover=1&player=1&merch=1"></iframe>
         </div>
 
         <div class="widget-docs">
@@ -43,6 +43,8 @@
                 for this demo web site is on Github</p>
 
             <h2>Most recent spins in an iframe</h2>
+
+            <p><a href="np-v1.html">Old Now Playing widget documentation</a></p>
 
             <p><a href="https://github.com/spinitron/v2-web-integration/blob/master/index.html">This page</a>
                 shows how you can put the recent spins in an iframe.</p>
@@ -71,26 +73,40 @@
                 </tr>
                 <tr>
                     <td><code>sharing</code></td>
-                    <td>Set to &quot;1&quot; to request Twitter and Facebook share links in the markup.</td>
-                </tr>
-                <tr>
-                    <td><code>time</code></td>
-                    <td>Set to &quot;1&quot; to request timestamps at the start of a line. Default is “… spun by …”
-                        clause
+                    <td>Set to &quot;1&quot; to request Twitter and Facebook share links in the markup.
+                        If not set, station setting 'Display: "Enable Share to ... links"' is used to determine whether
+                        links should be displayed. Enabled by default.
                     </td>
                 </tr>
                 <tr>
-                    <td><code>nolinks</code></td>
-                    <td>Set to &quot;1&quot; to request no links in the response.</td>
+                    <td><code>cover</code></td>
+                    <td>Set to &quot;1&quot; to request cover art images in the markup.
+                        If not set, station setting 'Display: "Enable cover art on public pages"' is used to determine
+                        whether cover art should be displayed. Enabled by default.
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>player</code></td>
+                    <td>Set to &quot;1&quot; to request an ability to play songs preview from Apple Music.
+                        Enabled by default.
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>merch</code></td>
+                    <td>Set to &quot;1&quot; to request "Buy it!" links in the markup.
+                        If not set, station setting 'Display: "Enable Buy it! links"' is used to determine
+                        whether links should be displayed. Enabled by default.
+                    </td>
                 </tr>
                 </tbody>
             </table>
 
-            <p class="clearfix">Set the styles for the iframe contents in Spinitron. Go to Admin: Station settings: Custom stylesheet.</p>
+            <p class="clearfix">Set the styles for the iframe contents in Spinitron. Go to Admin: Station settings:
+                Custom stylesheet.</p>
 
             <p>The example iframe on this page is</p>
 
-            <pre><code>&lt;iframe src="//widgets.spinitron.com/widget/now-playing?station=wzbc&amp;num=5&amp;time=1&amp;sharing=1"&gt;&lt;/iframe&gt;</code></pre>
+            <pre><code>&lt;iframe src="//widgets.spinitron.com/widget/now-playing-v2?station=wzbc&num=5&sharing=1&cover=1&player=1&merch=1"&gt;&lt;/iframe&gt;</code></pre>
 
             <p>See also the <a href="https://spinitron.com/v2-api-demo/">API demo</a></p>
         </div>
