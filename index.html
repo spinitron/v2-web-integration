@@ -35,7 +35,7 @@
                 <h1>Now Playing</h1>
                 <h2>Most recent 5 spins with enabled sharing, cover art, player and "Buy it" links</h2>
             </header>
-            <iframe src="//widgets.spinitron.com/widget/now-playing-v2?station=wzbc&num=5&sharing=1&cover=1&player=1&merch=1"></iframe>
+            <iframe src="//widgets.spinitron.com/widget/now-playing-v2?station=wzbc&num=5&sharing=1&cover=1&player=1&merch=1" allow="encrypted-media"></iframe>
         </div>
 
         <div class="widget-docs">
@@ -88,7 +88,8 @@
                 <tr>
                     <td><code>player</code></td>
                     <td>Set to &quot;1&quot; to request an ability to play songs preview from Apple Music.
-                        Enabled by default.
+                        Enabled by default. <br/>
+                        You'll need to set <code>allow="encrypted-media"</code> attribute for the iframe tag.
                     </td>
                 </tr>
                 <tr>
@@ -106,7 +107,7 @@
 
             <p>The example iframe on this page is</p>
 
-            <pre><code>&lt;iframe src="//widgets.spinitron.com/widget/now-playing-v2?station=wzbc&num=5&sharing=1&cover=1&player=1&merch=1"&gt;&lt;/iframe&gt;</code></pre>
+            <pre><code>&lt;iframe src="//widgets.spinitron.com/widget/now-playing-v2?station=wzbc&num=5&sharing=1&cover=1&player=1&merch=1" allow="encrypted-media"&gt;&lt;/iframe&gt;</code></pre>
 
             <p>See also the <a href="https://spinitron.com/v2-api-demo/">API demo</a></p>
         </div>
