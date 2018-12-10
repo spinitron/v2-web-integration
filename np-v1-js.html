@@ -33,11 +33,10 @@
 
         <div class="widget-box now-playing">
             <header>
-                <h1>Recent spins on wzbc</h1>
+                <h1>Recent spins on WZBC</h1>
             </header>
 
-            <div data-station="wzbc" data-num="5" data-sharing="1" data-player="1" data-merch="1" data-cover="1"
-                 data-action="now-playing-v2"
+            <div data-station="wrfi" data-num="5" data-time="1" data-sharing="1" data-action="now-playing"
                  class="spinitron-js-widget"></div>
             <script async src="//spinitron.com/static/js/widget.js"></script>
         </div>
@@ -48,9 +47,7 @@
 
             <h2>Recent spins using JavaScript</h2>
 
-            <p><a href="np-v1-js.html">Old Now Playing JS widget documentation</a></p>
-
-            <p><a href="https://github.com/spinitron/v2-web-integration/blob/master/widget.html">This page</a> shows
+            <p><a href="https://github.com/spinitron/v2-web-integration/blob/master/np-v1-js.html">This page</a> shows
                 how you can put recent spins on the page using the JavaScript widget.</p>
 
             <h3>About the Spinitron JavaScript Widget</h3>
@@ -71,29 +68,25 @@
                 <li><p>It loads faster and with less flicker.</p></li>
             </ol>
 
-            <p>To use the widget, put a container element, a <code>&lt;div&gt;</code> for example, on your page in which
-                the
+            <p>To use the widget, put a container element, a <code>&lt;div&gt;</code> for example, on your page in which the
                 recent spins should appear, followed by the widget <code>&lt;script&gt;</code> element like this.</p>
 
-            <pre><code>&lt;div class=&quot;spinitron-js-widget&quot; data-action=&quot;now-playing-v2&quot; data-station=&quot;wzbc&quot;&gt;&lt;/div&gt;
+            <pre><code>&lt;div class=&quot;spinitron-js-widget&quot; data-action=&quot;now-playing&quot; data-station=&quot;wzbc&quot;&gt;&lt;/div&gt;
 &lt;script src=&quot;//spinitron.com/static/js/widget.js"&gt;&lt;/script&gt;</code></pre>
 
             <p>The container element must have</p>
 
             <ul>
                 <li>The <code>spinitron-js-widget</code> CSS class, e.g. <code>class="spinitron-js-widget"</code></li>
-                <li>A <code>data-action</code> attribute to say what goes in the container, e.g. <code>data-action="now-playling-v2"</code>
-                </li>
-                <li>A <code>data-station</code> attribute to identify your station, e.g.
-                    <code>data-station="wzbc"</code></li>
+                <li>A <code>data-action</code> attribute to say what goes in the container, e.g. <code>data-action="now-playling"</code></li>
+                <li>A <code>data-station</code> attribute to identify your station, e.g. <code>data-station="wzbc"</code></li>
             </ul>
 
             <p>Depending on the action there may be more optional parameters you can set with data attributes.</p>
 
-            <p>If you have more than one widget on a page, you need the <code>&lt;script&gt;</code> element only once.
-            </p>
+            <p>If you have more than one widget on a page, you need the <code>&lt;script&gt;</code> element only once.</p>
 
-            <h3>About the widget's <code>now-playing-v2</code> action</h3>
+            <h3>About the widget's <code>now-playing</code> action</h3>
 
             <p>Parameters that control the widget are described in the table.</p>
 
@@ -104,6 +97,7 @@
                     <th>Use</th>
                 </tr>
                 </thead>
+
                 <tbody>
                 <tr>
                     <td><code>station</code></td>
@@ -117,38 +111,25 @@
                 </tr>
                 <tr>
                     <td><code>sharing</code></td>
-                    <td>Set to &quot;1&quot; to request Twitter and Facebook share links in the markup.
-                        If not set, station setting 'Display: "Enable Share to ... links"' is used to determine whether
-                        links should be displayed. Enabled by default.
+                    <td>Set to &quot;1&quot; to request Twitter and Facebook share links in the markup.</td>
+                </tr>
+                <tr>
+                    <td><code>time</code></td>
+                    <td>Set to &quot;1&quot; to request timestamps at the start of a line. Default is “… spun by …”
+                        clause
                     </td>
                 </tr>
                 <tr>
-                    <td><code>cover</code></td>
-                    <td>Set to &quot;1&quot; to request cover art images in the markup.
-                        If not set, station setting 'Display: "Enable cover art on public pages"' is used to determine
-                        whether cover art should be displayed. Enabled by default.
-                    </td>
-                </tr>
-                <tr>
-                    <td><code>player</code></td>
-                    <td>Set to &quot;1&quot; to request an ability to play songs preview from Apple Music.
-                        Enabled by default.
-                    </td>
-                </tr>
-                <tr>
-                    <td><code>merch</code></td>
-                    <td>Set to &quot;1&quot; to request "Buy it!" links in the markup.
-                        If not set, station setting 'Display: "Enable Buy it! links"' is used to determine
-                        whether links should be displayed. Enabled by default.
-                    </td>
+                    <td><code>nolinks</code></td>
+                    <td>Set to &quot;1&quot; to request no links in the response.</td>
                 </tr>
                 </tbody>
             </table>
 
             <p>The example on this page uses this markup which you can also see in the
-                <a href="https://github.com/spinitron/v2-web-integration/blob/master/widget.html">source code</a>.</p>
+                <a href="https://github.com/spinitron/v2-web-integration/blob/master/np-v1-js.html">source code</a>.</p>
 
-            <pre><code>&lt;div class="spinitron-js-widget" data-action="now-playing-v2" data-station="wzbc" data-num="5" data-sharing="1" data-player="1" data-merch="1" data-cover="1"&gt;&lt;/div&gt;
+            <pre><code>&lt;div class="spinitron-js-widget" data-action="now-playing" data-station="wzbc" data-num="5" data-time="1" data-sharing="1"&gt;&lt;/div&gt;
 &lt;script async src="//spinitron.com/static/js/widget.js"&gt;&lt;/script&gt;</code></pre>
         </div>
 
