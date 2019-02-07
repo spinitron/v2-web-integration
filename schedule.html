@@ -50,10 +50,26 @@
                     <td><code>station</code></td>
                     <td>Station id, e.g. &quot;wzbc&quot;. Mandatory</td>
                 </tr>
+                <tr>
+                    <td><code>view</code></td>
+                    <td>One of the supported views:
+                    <code>month</code>,
+                    <code>basicDay</code>,
+                    <code>basicWeek</code>,
+                    <code>agendaDay</code>,
+                    <code>agendaWeek</code>,
+                    <code>listDay</code>,
+                    <code>listWeek</code>,
+                    <code>listMonth</code>,
+                    <code>listYear</code></td>
+                </tr>
                 </tbody>
             </table>
 
-            <p class="clearfix">Set the styles for the iframe contents in Spinitron. Go to Admin: Station settings: Custom stylesheet.</p>
+            <p class="clearfix">The <code>view</code> param controls which of the calendar views loads into the
+            iframe. The list views are good for narrower iframes and viewports. Experiment to find what works best.</p>
+
+            <p>Set the styles for the iframe contents in Spinitron. Go to Admin: Station settings: Custom stylesheet.</p>
 
             <p>The example iframe on this page is</p>
 
