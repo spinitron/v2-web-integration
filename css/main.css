@@ -293,6 +293,10 @@ header nav a:hover {
     font-weight: bolder;
 }
 
+.spins.public-spins .meta {
+    display: none;
+}
+
 /* ==============
     MOBILE: Content
    ============== */
